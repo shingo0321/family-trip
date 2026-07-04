@@ -149,17 +149,3 @@ section.panel.active { display: block; }
   color: #aaa;
   text-decoration: line-through;
 }
-
-#share-btn {
-  display: none;
-  width: 100%;
-  padding: 14px;
-  margin-top: 8px;
-  background: #06c755;
-  color: #fff;
-  border: none;
-  border-radius: 10px;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-}

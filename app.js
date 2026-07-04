@@ -129,38 +129,9 @@ function setupSwipe() {
   );
 }
 
-async function setupLiffShare() {
-  const LIFF_ID = "YOUR_LIFF_ID";
-  const shareBtn = document.getElementById("share-btn");
-
-  try {
-    await liff.init({ liffId: LIFF_ID });
-    if (liff.isInClient() && liff.isApiAvailable("shareTargetPicker")) {
-      shareBtn.style.display = "block";
-      shareBtn.addEventListener("click", async () => {
-        try {
-          await liff.shareTargetPicker([
-            {
-              type: "text",
-              text: `${TRIP_DATA.title} ${TRIP_DATA.dateRange}\n${location.href}`
-            }
-          ]);
-        } catch (err) {
-          console.error(err);
-        }
-      });
-    }
-  } catch (err) {
-    // LINE外のブラウザではLIFF初期化に失敗することがあるが、
-    // ポータルサイト自体は通常ページとして表示できるため無視する。
-    console.log("LIFF init skipped:", err.message);
-  }
-}
-
 renderHero();
 renderItinerary();
 renderMap();
 renderPackingList();
 setupTabs();
 setupSwipe();
-setupLiffShare();
