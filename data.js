@@ -3,11 +3,11 @@
 const TRIP_DATA = {
   title: "家族旅行",
   subtitle: "TODO: キャッチコピーを入れる（例: 行き先名）",
-  dateRange: "TODO: 旅行日程（例: 2026年8月1日(土)〜2日(日)）",
+  dateRange: "2026年8月8日(土)〜9日(日)",
 
   itinerary: [
     {
-      date: "TODO: 1日目の日付（例: 8月1日(土)）",
+      date: "8月8日(土)",
       items: [
         { time: "10:00", title: "TODO: 予定（例: 出発・集合）", place: "TODO: 場所" },
         { time: "13:00", title: "TODO: 予定", place: "TODO: 場所" },
@@ -15,7 +15,7 @@ const TRIP_DATA = {
       ]
     },
     {
-      date: "TODO: 2日目の日付（例: 8月2日(日)）",
+      date: "8月9日(日)",
       items: [
         { time: "09:00", title: "TODO: 予定", place: "TODO: 場所" },
         { time: "15:00", title: "TODO: 予定（例: 解散）", place: "TODO: 場所" }
