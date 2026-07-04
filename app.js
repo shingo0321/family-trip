@@ -30,6 +30,24 @@ function renderItinerary() {
     .join("");
 }
 
+function renderMap() {
+  const container = document.getElementById("map-panel");
+  const places = [...new Set(
+    TRIP_DATA.itinerary.flatMap((day) => day.items.map((item) => item.place)).filter(Boolean)
+  )];
+
+  container.innerHTML = places
+    .map(
+      (place) => `
+        <a class="map-item" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(place)}" target="_blank" rel="noopener">
+          <span class="map-item-place">${place}</span>
+          <span class="map-item-arrow">›</span>
+        </a>
+      `
+    )
+    .join("");
+}
+
 function renderPackingList() {
   const container = document.getElementById("packing-panel");
   const checkedKey = (category, item) => `packing:${category}:${item}`;
@@ -108,6 +126,7 @@ async function setupLiffShare() {
 
 renderHero();
 renderItinerary();
+renderMap();
 renderPackingList();
 setupTabs();
 setupLiffShare();
