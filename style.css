@@ -93,6 +93,20 @@ section.panel.active { display: block; }
 .timetable-item .title { font-weight: 600; white-space: pre-line; }
 .timetable-item .place { color: #888; font-size: 0.85rem; }
 
+.route-map {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  margin-bottom: 16px;
+}
+
+.route-map iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+  display: block;
+}
+
 .map-item {
   display: flex;
   align-items: center;
