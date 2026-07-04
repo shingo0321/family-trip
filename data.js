@@ -2,23 +2,23 @@
 // ここを実際の情報に差し替えるだけでページ全体が更新されます。
 const TRIP_DATA = {
   title: "家族旅行",
-  subtitle: "（行き先未定）",
+  subtitle: "八ヶ岳ツアー",
   dateRange: "2026年8月8日(土)〜9日(日)",
 
   itinerary: [
     {
       date: "8月8日(土)",
       items: [
-        { time: "10:00", title: "TODO: 予定（例: 出発・集合）", place: "東京駅" },
-        { time: "13:00", title: "TODO: 予定", place: "浅草寺" },
-        { time: "18:00", title: "TODO: 予定（例: 宿にチェックイン）", place: "東京ディズニーランドホテル" }
+        { time: "10:00", title: "TODO: 予定（例: 出発・集合）", place: "TODO: 場所" },
+        { time: "13:00", title: "TODO: 予定", place: "TODO: 場所" },
+        { time: "18:00", title: "宿にチェックイン", place: "グランドメルキュール八ヶ岳清里リゾート" }
       ]
     },
     {
       date: "8月9日(日)",
       items: [
-        { time: "09:00", title: "TODO: 予定", place: "東京ディズニーランド" },
-        { time: "15:00", title: "TODO: 予定（例: 解散）", place: "東京駅" }
+        { time: "09:00", title: "TODO: 予定", place: "TODO: 場所" },
+        { time: "15:00", title: "TODO: 予定（例: 解散）", place: "TODO: 場所" }
       ]
     }
   ],
