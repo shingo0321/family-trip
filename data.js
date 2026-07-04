@@ -5,12 +5,6 @@ const TRIP_DATA = {
   subtitle: "八ヶ岳ツアー",
   dateRange: "2026年8月8日(土)〜9日(日)",
 
-  routeMap: {
-    origin: "焼津市",
-    waypoints: ["清泉寮", "萌木の村"],
-    destination: "グランドメルキュール八ヶ岳清里リゾート"
-  },
-
   itinerary: [
     {
       date: "8月8日(土)",

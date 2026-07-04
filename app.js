@@ -36,20 +36,7 @@ function renderMap() {
     TRIP_DATA.itinerary.flatMap((day) => day.items.map((item) => item.place)).filter(Boolean)
   )];
 
-  const route = TRIP_DATA.routeMap;
-  const routeHtml = route
-    ? `
-        <div class="route-map">
-          <iframe
-            src="https://maps.google.com/maps?saddr=${encodeURIComponent(route.origin)}&daddr=${[...(route.waypoints || []), route.destination].map(encodeURIComponent).join("+to:")}&output=embed"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-      `
-    : "";
-
-  const placesHtml = places
+  container.innerHTML = places
     .map(
       (place) => `
         <a class="map-item" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(place)}" target="_blank" rel="noopener">
@@ -59,8 +46,6 @@ function renderMap() {
       `
     )
     .join("");
-
-  container.innerHTML = routeHtml + placesHtml;
 }
 
 function renderPackingList() {
