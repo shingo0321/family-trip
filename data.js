@@ -9,16 +9,19 @@ const TRIP_DATA = {
     {
       date: "8月8日(土)",
       items: [
-        { time: "10:00", title: "TODO: 予定（例: 出発・集合）", place: "TODO: 場所" },
-        { time: "13:00", title: "TODO: 予定", place: "TODO: 場所" },
+        { time: "10:00", title: "小淵沢駅に集合・出発", place: "小淵沢駅" },
+        { time: "13:00", title: "清泉寮で昼食・ソフトクリーム", place: "清泉寮" },
+        { time: "15:30", title: "萌木の村でお土産・散策", place: "萌木の村" },
         { time: "18:00", title: "宿にチェックイン", place: "グランドメルキュール八ヶ岳清里リゾート" }
       ]
     },
     {
       date: "8月9日(日)",
       items: [
-        { time: "09:00", title: "TODO: 予定", place: "TODO: 場所" },
-        { time: "15:00", title: "TODO: 予定（例: 解散）", place: "TODO: 場所" }
+        { time: "09:00", title: "サンメドウズ清里で天空のブランコ・滑り台", place: "サンメドウズ清里" },
+        { time: "12:00", title: "清里高原で昼食", place: "清里高原" },
+        { time: "14:00", title: "八ヶ岳倶楽部でガーデン散策", place: "八ヶ岳倶楽部" },
+        { time: "15:30", title: "解散", place: "小淵沢駅" }
       ]
     }
   ],
