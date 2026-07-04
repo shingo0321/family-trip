@@ -9,7 +9,7 @@ const TRIP_DATA = {
     {
       date: "8月8日(土)",
       items: [
-        { time: "10:00", title: "小淵沢駅に集合・出発", place: "小淵沢駅" },
+        { time: "08:00", title: "焼津から車で出発", place: "焼津市" },
         { time: "13:00", title: "清泉寮で昼食・ソフトクリーム", place: "清泉寮" },
         { time: "15:30", title: "萌木の村でお土産・散策", place: "萌木の村" },
         { time: "18:00", title: "宿にチェックイン", place: "グランドメルキュール八ヶ岳清里リゾート" }
@@ -21,7 +21,7 @@ const TRIP_DATA = {
         { time: "09:00", title: "サンメドウズ清里で天空のブランコ・滑り台", place: "サンメドウズ清里" },
         { time: "12:00", title: "清里高原で昼食", place: "清里高原" },
         { time: "14:00", title: "八ヶ岳倶楽部でガーデン散策", place: "八ヶ岳倶楽部" },
-        { time: "15:30", title: "解散", place: "小淵沢駅" }
+        { time: "16:00", title: "解散・焼津へ出発", place: "焼津市" }
       ]
     }
   ],
