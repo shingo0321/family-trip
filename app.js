@@ -98,11 +98,10 @@ function setupTabs() {
 
 function setupSwipe() {
   const buttons = document.querySelectorAll("nav.tabs button");
-  const main = document.querySelector("main");
   let startX = 0;
   let startY = 0;
 
-  main.addEventListener(
+  document.addEventListener(
     "touchstart",
     (e) => {
       startX = e.changedTouches[0].screenX;
@@ -111,7 +110,7 @@ function setupSwipe() {
     { passive: true }
   );
 
-  main.addEventListener(
+  document.addEventListener(
     "touchend",
     (e) => {
       const deltaX = e.changedTouches[0].screenX - startX;
