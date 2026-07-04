@@ -96,6 +96,40 @@ function setupTabs() {
   });
 }
 
+function setupSwipe() {
+  const buttons = document.querySelectorAll("nav.tabs button");
+  const main = document.querySelector("main");
+  let startX = 0;
+  let startY = 0;
+
+  main.addEventListener(
+    "touchstart",
+    (e) => {
+      startX = e.changedTouches[0].screenX;
+      startY = e.changedTouches[0].screenY;
+    },
+    { passive: true }
+  );
+
+  main.addEventListener(
+    "touchend",
+    (e) => {
+      const deltaX = e.changedTouches[0].screenX - startX;
+      const deltaY = e.changedTouches[0].screenY - startY;
+
+      if (Math.abs(deltaX) < 50 || Math.abs(deltaX) < Math.abs(deltaY) * 1.5) return;
+
+      const currentIndex = [...buttons].findIndex((b) => b.classList.contains("active"));
+      const nextIndex = deltaX < 0 ? currentIndex + 1 : currentIndex - 1;
+
+      if (nextIndex >= 0 && nextIndex < buttons.length) {
+        buttons[nextIndex].click();
+      }
+    },
+    { passive: true }
+  );
+}
+
 async function setupLiffShare() {
   const LIFF_ID = "YOUR_LIFF_ID";
   const shareBtn = document.getElementById("share-btn");
@@ -129,4 +163,5 @@ renderItinerary();
 renderMap();
 renderPackingList();
 setupTabs();
+setupSwipe();
 setupLiffShare();
