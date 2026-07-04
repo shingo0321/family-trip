@@ -56,6 +56,7 @@ main {
   max-width: 640px;
   margin: 0 auto;
   padding: 20px 16px 48px;
+  touch-action: pan-y;
 }
 
 section.panel { display: none; }
@@ -103,6 +104,9 @@ section.panel.active { display: block; }
   margin-bottom: 12px;
   text-decoration: none;
   color: #1a1a1a;
+  -webkit-touch-callout: none;
+  -webkit-user-drag: none;
+  touch-action: pan-y;
 }
 
 .map-item-place { font-weight: 600; }
