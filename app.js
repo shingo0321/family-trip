@@ -36,7 +36,16 @@ function renderMap() {
     TRIP_DATA.itinerary.flatMap((day) => day.items.map((item) => item.place)).filter(Boolean)
   )];
 
-  container.innerHTML = places
+  const videoHtml = `
+    <div class="route-video">
+      <video controls playsinline preload="metadata">
+        <source src="assets/route-video.mp4" type="video/mp4" />
+      </video>
+      <p class="route-video-caption">ルート紹介動画</p>
+    </div>
+  `;
+
+  container.innerHTML = videoHtml + places
     .map(
       (place) => `
         <a class="map-item" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(place)}" target="_blank" rel="noopener">
